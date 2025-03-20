@@ -1,0 +1,25 @@
+table:
+  name: users
+  schema: public
+array_relationships:
+  - name: notification_preferences
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: notification_preferences
+          schema: public
+  - name: rides
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: rides
+          schema: public
+  - name: wallets
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: wallet
+          schema: public

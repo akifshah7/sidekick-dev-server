@@ -1,0 +1,11 @@
+table:
+  name: pricing
+  schema: public
+array_relationships:
+  - name: rides
+    using:
+      foreign_key_constraint_on:
+        column: pricing_id
+        table:
+          name: rides
+          schema: public

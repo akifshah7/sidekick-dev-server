@@ -1,0 +1,1 @@
+CREATE TYPE scooter_status_enum AS ENUM ('AVAILABLE', 'IN_USE', 'MAINTENANCE', 'INACTIVE');

@@ -1,0 +1,9 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- CREATE TABLE maintenance_logs (
+--     log_id      SERIAL PRIMARY KEY,
+--     scooter_id  UUID NOT NULL REFERENCES scooters(scooter_id),
+--     description TEXT,
+--     resolved_at TIMESTAMPTZ,
+--     created_at  TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+-- );

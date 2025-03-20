@@ -1,0 +1,11 @@
+table:
+  name: hubs
+  schema: public
+array_relationships:
+  - name: scooters
+    using:
+      foreign_key_constraint_on:
+        column: current_hub_id
+        table:
+          name: scooters
+          schema: public

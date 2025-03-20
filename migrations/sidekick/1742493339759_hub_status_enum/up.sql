@@ -1,0 +1,1 @@
+CREATE TYPE hub_status_enum AS ENUM ('ACTIVE', 'INACTIVE', 'MAINTENANCE');

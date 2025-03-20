@@ -1,3 +1,22 @@
 table:
   name: scooters
   schema: public
+object_relationships:
+  - name: hub
+    using:
+      foreign_key_constraint_on: current_hub_id
+array_relationships:
+  - name: maintenance_logs
+    using:
+      foreign_key_constraint_on:
+        column: scooter_id
+        table:
+          name: maintenance_logs
+          schema: public
+  - name: rides
+    using:
+      foreign_key_constraint_on:
+        column: scooter_id
+        table:
+          name: rides
+          schema: public

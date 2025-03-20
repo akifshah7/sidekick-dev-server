@@ -1,0 +1,13 @@
+table:
+  name: rides
+  schema: public
+object_relationships:
+  - name: pricing
+    using:
+      foreign_key_constraint_on: pricing_id
+  - name: scooter
+    using:
+      foreign_key_constraint_on: scooter_id
+  - name: user
+    using:
+      foreign_key_constraint_on: user_id
