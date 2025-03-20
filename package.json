@@ -1,0 +1,17 @@
+{
+  "name": "sidekick-dev-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "console": "npx hasura console",
+    "deploy": "npx hasura deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "hasura-cli": "^2.15.2"
+  }
+}
