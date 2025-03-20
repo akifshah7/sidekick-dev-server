@@ -1,0 +1,2 @@
+- "!include public_scooters.yaml"
+- "!include public_user.yaml"
