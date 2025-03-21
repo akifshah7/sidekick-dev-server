@@ -24,3 +24,6 @@ primary_region = "bom"
   HASURA_GRAPHQL_ENABLE_CONSOLE = "true"
   HASURA_GRAPHQL_DEV_MODE = "true"
   HASURA_GRAPHQL_UNAUTHORIZED_ROLE = "anonymous"
+  HASURA_GRAPHQL_JWT_SECRET = "{\"type\": \"HS256\", \"key\": \"pcoaUQk4EKyF0BmVKD9Bmh+0Qhg1ZPE0OpIklZQTF68Sp3GyngO8gaJYCqcSFrB7iL2DYKwRI8uvyIq1GAjC/g==\", \"claims_namespace\": \"https://hasura.io/jwt/claims\"}"
+
+

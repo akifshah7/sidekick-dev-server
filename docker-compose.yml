@@ -30,6 +30,11 @@ services:
       # Optionally disable prepared statements to avoid collision issues
       HASURA_GRAPHQL_DISABLE_PREPARED_STATEMENTS: "true"
       HASURA_GRAPHQL_PG_POOL_SETTINGS: '{"retries":1,"idle_timeout":180,"max_connections":10}'
+      HASURA_GRAPHQL_JWT_SECRET: '{
+              "type": "HS256",
+              "key": "pcoaUQk4EKyF0BmVKD9Bmh+0Qhg1ZPE0OpIklZQTF68Sp3GyngO8gaJYCqcSFrB7iL2DYKwRI8uvyIq1GAjC/g==",
+              "claims_namespace": "https://hasura.io/jwt/claims"
+            }'
     volumes:
       - ./migrations:/migrations
       - ./metadata:/metadata
