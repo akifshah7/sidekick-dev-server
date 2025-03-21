@@ -17,14 +17,19 @@ services:
     restart: always
     ports:
       - "8080:8080"
-    depends_on:
-      - postgres
+    # Remove dependency on local Postgres since Hasura will use Supabase instead
+    # depends_on:
+    #   - postgres
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:mypassword@postgres:5432/mydatabase
+      # Updated to use Supabase's connection string (with URL-encoded password and SSL required)
+      HASURA_GRAPHQL_DATABASE_URL: "postgresql://postgres.aejfhbzodmxsgwugfagr:6jZJ6%26CYCAbvn%23x@aws-0-ap-south-1.pooler.supabase.com:5432/postgres?sslmode=require"
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_ADMIN_SECRET: mysecret
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anonymous
       HASURA_GRAPHQL_DEV_MODE: "true"
+      # Optionally disable prepared statements to avoid collision issues
+      HASURA_GRAPHQL_DISABLE_PREPARED_STATEMENTS: "true"
+      HASURA_GRAPHQL_PG_POOL_SETTINGS: '{"retries":1,"idle_timeout":180,"max_connections":10}'
     volumes:
       - ./migrations:/migrations
       - ./metadata:/metadata
